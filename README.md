@@ -14,12 +14,15 @@ that allows users to toggle the YouTube homepage feed.
 
 ## Development
 
-This project follows the programming requirements defined in
-AGENTS.md and the modular-development skill located at
-.agents/skills/modular-development/SKILL.md.
+Development is modular, local-first, and incremental.
 
-Development is local-first, modular, and incremental.
+The extension uses vanilla JavaScript, CSS, and the
+WebExtensions API without external runtime dependencies.
 
 ## Project Status
 
-Initial development.
+Version 0.1.0 is under development.
+
+Homepage feed suppression and an interactive feed toggle
+are implemented. Preference persistence and internal
+navigation handling are planned.

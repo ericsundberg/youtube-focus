@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Focus",
+  "version": "0.1.0",
+  "description": "Toggle the YouTube homepage feed for distraction-free searching.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "css": [
+        "styles/feed.css",
+        "styles/toggle.css"
+      ],
+      "js": [
+        "scripts/page/is-homepage.js",
+        "scripts/feed/set-visibility.js",
+        "scripts/toggle/create.js",
+        "scripts/toggle/mount.js",
+        "scripts/toggle/observe-mount.js",
+        "scripts/bootstrap.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

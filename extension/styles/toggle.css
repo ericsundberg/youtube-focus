@@ -1,0 +1,68 @@
+#youtube-focus-feed-toggle {
+    --focus-switch-off: #606060;
+    --focus-switch-on: #065fd4;
+    --focus-switch-thumb: #ffffff;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-sizing: border-box;
+    max-width: calc(100vw - 48px);
+    min-height: 44px;
+    padding: 10px 16px;
+    border: 1px solid var(--yt-spec-10-percent-layer, #808080);
+    border-radius: 12px;
+    background-color: var(--yt-spec-base-background, Canvas);
+    color: var(--yt-spec-text-primary, CanvasText);
+    font: 500 14px/1.5 Roboto, Arial, sans-serif;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+    cursor: pointer;
+}
+
+#youtube-focus-feed-toggle input {
+    appearance: none;
+    box-sizing: border-box;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 24px;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background-color: var(--focus-switch-off);
+    background-image: radial-gradient(
+        circle, var(--focus-switch-thumb) 0 7px, transparent 8px
+    );
+    background-size: 22px 22px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    cursor: pointer;
+}
+
+#youtube-focus-feed-toggle input:checked {
+    background-color: var(--focus-switch-on);
+    background-position: right center;
+}
+
+#youtube-focus-feed-toggle input:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    #youtube-focus-feed-toggle {
+        right: 12px;
+        bottom: 80px;
+        max-width: calc(100vw - 24px);
+    }
+}
+
+@media (forced-colors: active) {
+    #youtube-focus-feed-toggle input {
+        appearance: auto;
+        background: none;
+    }
+}

@@ -1,0 +1,4 @@
+html[data-youtube-focus-feed-hidden]
+    ytd-two-column-browse-results-renderer[page-subtype="home"] {
+    display: none !important;
+}
